@@ -494,6 +494,11 @@ h6 {
   }
 }
 
+/* download syllabus css */
+.download-syllabus:hover {
+  background-color: transparent;
+  border: 1px solid orangered;
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -698,7 +703,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about-img.jpg") center center no-repeat;
+  background: url("../img/about-bg.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -831,7 +836,7 @@ section {
   margin-top: 35px;
   margin-bottom: 25px;
   text-align: center;
-  height: 200px;
+  height: 320px;
   position: relative;
   background: #fff;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
