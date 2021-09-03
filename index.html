@@ -2,622 +2,186 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATHARW | an inititative of CodeKart</title>
+    <link rel="stylesheet" href="./assets/css/welcome.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <title>ATHARW | A initiate of CodeKart</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/ATHARW-icon.jpg" rel="icon">
+    <link href="assets/img/ATHARW-icon.jpg" rel="apple-touch-icon">
 
-  <!-- Favicons -->
-  <link href="assets/img/ATHARW-icon.jpg" rel="icon">
-  <link href="assets/img/ATHARW-icon.jpg" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@atharw.com"
-            target="_blank">info@atharw.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span><a href="tel:+91 9178 587 486">+91 9178 587
-              486</a></span></i>
-      </div>
 
-      <div class="cta d-none d-md-flex align-items-center">
-        <a href="#about" class="scrollto">Get Started</a>
-      </div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
     </div>
-  </section>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
+    <!-- <img width="100%" src='https://unsplash.it/3000/3000/?random' /> -->
 
-      <div class="logo">
-        <h1><a href="index.html"><img src="./assets/img/logo-new.png" alt=""></a></h1>
-      </div>
+    <header>
+        <a href="" class="logo"><img src="./assets/img/logo-new.png" alt=""></a>
+        <!-- <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Store</a></li>
+            <li><a href="">Contact</a></li>
+        </ul> -->
+    </header>
+    <section class="banner">
+        <div class="imgBx">
+            <div class="active welcome-screen">
+                <h3>&nbsp; &nbsp; WELCOME TO</h3>
+                <h1>ATHARW</h1>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#"></a></li>
-              <li class="dropdown"><a href="#"><span>Web Developement</span><i class="bi bi-chevron-right"> </i></a>
-                <ul>
-                  <li><a href="./CRUISINE-COURSE/MERN DEV course details.html">MERN Developement</a></li>
-                  <li><a href="./CRUISINE-COURSE/MEAN DEV course details.html">MEAN Developement</a></li>
-                  <li><a href="./CRUISINE-COURSE/LARAVEL course details.html">PHP & Laravel</a></li>
-                  <li><a href="./MAIN-COURSE/REACT course details.html">React</a></li>
-                  <li><a href="./MAIN-COURSE/ANGULAR course details.html">Angular</a></li>
-                  <li><a href="./MAIN-COURSE/PYTHON WITH DJANGO course details.html">Python & Django</a></li>
-                  <li><a href="./MAIN-COURSE/PHP course details.html">PHP</a></li>
-                  <li><a href="./MAIN-COURSE/JAVASCRIPT course deatils.html">Javascript</a></li>
-                  <li><a href="./STARTER-COURSES/BASIC WEB TECHNOLOGY course details.html">Basic web Tech</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Mobile App Developement</span><i
-                    class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="./CRUISINE-COURSE/ADVANCE ANDROID DEV course details.html">Advance Android</a></li>
-                  <li><a href="./MAIN-COURSE/CORE ANDROID course details.html">Core Android</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Frameworks</span><i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="./MAIN-COURSE/HIBERNATE course deatils.html">Hibernate</a></li>
-                  <li><a href="./MAIN-COURSE/JSP course deatils.html">JSP</a></li>
-                  <li><a href="./MAIN-COURSE/SERVLET course deatils.html">Servlet</a></li>
-                  <li><a href="./MAIN-COURSE/SPRING course deatils.html">Spring</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Programming Language</span><i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="./CRUISINE-COURSE/PYTHON course details.html">Core & Advance Python</a></li>
-                  <li><a href="./MAIN-COURSE/ADVANCE PYTHON course deatils.html">Advance Python</a></li>
-                  <li><a href="./STARTER-COURSES/C PROGRAMMING course details.html">C Programming</a></li>
-                  <li><a href="./STARTER-COURSES/C++ PROGRAMMING course details.html">C++ Programming</a></li>
-                  <li><a href="./STARTER-COURSES/CORE JAVA PROGRAMMING course details.html">Core Java</a></li>
-                  <li><a href="./STARTER-COURSES/CORE PYTHON PROGRAMMING course details.html">Core Python</a></li>
-                  <li><a href="./STARTER-COURSES/SQL course details.html">Intro to SQL</a></li>
-                  <li><a href="./MAIN-COURSE/DS ALGO IN JAVA course details.html">DS-ALGO in Java</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Analytics</span><i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="./CRUISINE-COURSE/NLP course details.html">NLP</a></li>
-                  <li><a href="./MAIN-COURSE/DATA ANALYST course deatils.html">Data Analyst</a></li>
-                  <li><a href="./MAIN-COURSE/DATA VISUALIZATION course deatils.html">Data Visualization</a></li>
-                  <li><a href="./MAIN-COURSE/DEEP LEARNING course deatils.html">Deep Learning</a></li>
-                  <li><a href="./MAIN-COURSE/DIGITAL MARKETING course deatils.html">Digital Marketing</a></li>
-                  <li><a href="./MAIN-COURSE/DATA SCIENCE WITH PYTHON course details.html">Data Science</a></li>
-                  <li><a href="./MAIN-COURSE/PYTHON & SQL course details.html">Python & SQL</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Skill Developement</span><i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="./courses.html#values">Soft Skill Training</a></li>
-                  <li><a href="./courses.html#values">Preplacement Training</a></li>
-                  <li><a href="./courses.html#values">MS Office Training</a></li>
-                  <li><a href="./courses.html#values">Reasoning & Aptitude</a></li>
-                  <li><a href="./courses.html#values">Spoken English</a></li>
-                </ul>
-              </li>
+                <P><span style="font-size: 2rem;">A</span>tharw is an Ed-Tech platform which provides training,
+                    internships and projects assistance with job
+                    assistance on
+                    different technologies like all the commonly used programming languages, web development, mobile
+                    application
+                    development, software testing, digital marketing and many more. <br> Apart from technical students
+                    it
+                    helps the non-technical
+                    students to make them industry ready by providing the training on soft skill, good communication
+                    skill, reasoning and
+                    aptitude training and many more.</P>
+                <small style="color: #3d3d3d; font-weight: 700;">_Atharw" Your Future Begins With Us.</small>
+                <img src="./assets/img/Programmer.png" alt="">
+            </div>
+            <div class="">
+                <h2>OUR CORE VALUES</h2>
+                <P><span style="font-size: 2rem;">A</span>tharw always believes on three core values of Bhagavad Gita
+                    i.e. Purity, Honesty and Dedication. <br> It
+                    always determines
+                    to provide the pure content which is helpful for the students to make them unique from others. It
+                    always wants to be
+                    stay honest towards the students and expect the students should be honest as well. <br> Dedication
+                    is
+                    another weapon to get
+                    success. All the members of team Atharw are always dedicate to provide the best service to the
+                    students so that the
+                    students can get success in their life.</P>
+                <img src="./assets/img/CORE-VALUES.png" alt="">
+            </div>
+            <div class="">
+                <h2>DIRECTOR'S MESSAGE</h2>
 
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="About.html">About us</a></li>
-          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
-          <li><a class="nav-link scrollto" href="">Login/Register</a></li>
-          <!-- <li>
-            <a href="#login" class="nav-link" data-toggle="modal"><i class="fa fa-sign-in"></i> Login</a>
-          </li>
-          <li><a href="#register" class="nav-link" data-toggle="modal"><i class="fa fa-user-plus"></i> Register</a>
-          </li> -->
+                <h5>
+                    <span style="font-size: 1.5rem;">A</span>tharw is one of the initiatives of CodeKart. It is the
+                    edu-tech platform for providing the finest
+                    education based upon
+                    both technical as well as non-technical domains. The name Atharw has come from one of our Veda i.e.
+                    Atharva Veda in
+                    which the procedures of day to day life is clearly mentioned. The core values of Atharw has come
+                    from Bhagavad Gita i.e.
+                    'Purity', 'Honesty' & 'Dedication'. Being the members of Atharw, we are proud to follow our core
+                    values which always
+                    motivate us to spread purity through our contents, honestly treat our students and give our 100%
+                    dedication which will
+                    reflect on our student's career.
+                    <br><br>
+                    When students are going to take any of the courses from any platform one thing comes to their mind
+                    is whether that
+                    course or training is helpful for their career or not and can they get good opportunities to achieve
+                    their goal. In the
+                    teenage years or after graduation the state of mind of the students are always variable. They can
+                    not decide which
+                    career path they have to choose and which path gives them the satisfaction. As a result they join
+                    any field and after
+                    some years they get frustrated. In Atharw we don't tell students to join this training, it will make
+                    your career good or
+                    choose that training that will give you a high package. We first keep ourselves in their place, try
+                    to understand their
+                    area of interest, their dedication level and their aim of life and then we show them the
+                    possibilities and path to get
+                    their ultimate goal.
+                    <br><br>
+                    In the initial days we have started from varieties of technical training which can make the
+                    students
+                    industry ready as
+                    per the current scenario. Very soon we are going to help students of non-technical background
+                    who
+                    are preparing for
+                    non-technical jobs, students of schools and colleges. Our main motto is to provide quality
+                    education
+                    with the help of
+                    technology because we believe that "Technology with education is for everyone"
+                </h5>
+                <img src="./assets/img/director.png" alt="">
+            </div>
+            <div class="">
+                <h4>INTRO CLIP'</h4>
+                <video controls autoplay>
+                    <source src="./assets/img/Atharw-video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <a href="register.html"><button>EXPLORE <span style="color: white;">MORE</span>! <i
+                            class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </button></a>
+                <img src="./assets/img/video-intro.png" alt="">
+            </div>
+            <!-- <img src="./image/img1.jpg" alt="" class="active">
+            <img src="./image/img2.jpg" alt="">
+            <img src="./image/img3.jpg" alt="">
+            <img src="./image/img4.jpg" alt=""> -->
+        </div>
+
+
+
+        <ul class="controls">
+            <li onclick="prevSlide();prevSlideText()">Prev</li>
+            <li onclick="nextSlide();nextSlideText()">Next</li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="container" data-aos="fade-in">
-      <h1>Welcome to Atharw</h1>
-      <h2>YOUR FUTURE BEGINS WITH US</h2>
-      <div class="d-flex align-items-center get-started">
-        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
-        <a href="#portfolio" class="btn-get-started scrollto">Start Learning</a>
-      </div>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-xl-4 col-lg-5" data-aos="fade-up">
-            <div class="content">
-              <h3>Why Choose Atharw to learn a new Technology?</h3>
-              <p>
-                Atharw always follows three core values of Bhagavad Gita i.e. Purity Honesty and Dedication. The access
-                to education,
-                medicine, industry, transportation etc. has been simplified due to modern technology. Due to the
-                convenience and
-                efficiency provided by technology, our lives have improved significantly. So Atharw basically focuses on
-                the idea of
-                getting the best out of modern technology and creating new opportunities by providing the ray of modern
-                science in terms
-                of education among all because we believe that "Technology with education is for everyone".
-              </p>
-              <div class="text-center">
-                <a href="About.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-8 col-lg-7 d-flex">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bi bi-exclude"></i>
-                    <h4>Purity</h4>
-                    <p>Purity reverses our mental gravity. Purity of mind is the condition of Sattva, i.e., the state of
-                      the internal organ
-                      being untouched by Rajas and Tamas. Devotion to meditation on the knowledge (of the self) is firm
-                      adherence to the
-                      discrimination between the pure nature of the self and Prakrti.
-                    <p><small>-Bhagavad Gita</small></p>
-                    </p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bi bi-flower2"></i>
-                    <h4>Honesty</h4>
-                    <p>Being honest is the foremost quality of especially those treading on the path of spiritualism. In
-                      non-religious context
-                      honesty is a much desirable virtue. Honesty is one of the main ingredients of what constitutes
-                      knowledge. Honesty is one
-                      of the transcendental qualities which is created by Lord Krishna himself.
-                    <p><small>-Bhagavad Gita</small></p>
-                    </p>
-                  </div>
-                </div>
-                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-box mt-4 mt-xl-0">
-                    <i class="bi bi-gear-wide-connected"></i>
-                    <h4>Dedication</h4>
-                    <p>The Gita teaches perseverance in the face of impending threats. It calls upon us to dedicate our
-                      mind, body, and soul to
-                      pure duty and rewrite destiny. It provides strength in times of distress, spark in times of
-                      darkness, and helps snatch
-                      success from the jaws of failure.
-                    <p><small>-Bhagavad Gita</small></p>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-
-    <!-- ======= Cruisine Course Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <h2 data-aos="fade-up">COURSES</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">WEB DEVELOPEMENT</li>
-              <li data-filter=".filter-card">MOBILE DEVELOPEMENT</li>
-              <li data-filter=".filter-web">OTHER</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/course/mern.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/MERN DEV course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>WEB
-                  DEVELOPEMENT IN
-                  MERN
-                  STACK</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <img src="assets/img/course/android.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/ADVANCE ANDROID DEV course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>MOBILE APPLICATION
-                  WITH
-                  ADVANCE ANDROID</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/course/mean.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/MEAN DEV course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>WEB DEVELOPEMENT IN
-                  MEAN
-                  STACK</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/course/NLP.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/NLP course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>CERTIFICATION IN NLP</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/course/core&advance PYTHON.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/PYTHON course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>CERTIFICATION IN PYTHON PROGRAMMING LANGUAGE</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/course/laravel.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/LARAVEL course details.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>WEB DEVELOPEMENT IN
-                  LARAVEL</h4>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-lg-3 col-md-6 portfolio-item filter-web">
-            <img src="assets/img/course/sellenium.png" class="img-fluid" alt="">
-            <a href="./CRUISINE-COURSE/SOFTWARE TESTING course deatils.html" rel="noopener noreferrer">
-              <div class="portfolio-info">
-                <h4>SOFTWARE TESTING WITH SELLENIUM</h4>
-              </div>
-            </a>
-          </div>
+    </section>
 
 
 
-        </div>
-        <div class="text-center">
-          <a href="courses.html">
-            <div class="btn btn-lg  btn-warning">
-              Show More
-            </div>
-          </a>
-        </div>
+    <!-- slide control ======================================== -->
 
-      </div>
-    </section><!-- End Cruisine Course Section -->
+    <script type="text/javascript">
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
+        const imgBx = document.querySelector('.imgBx');
+        const slides = imgBx.getElementsByTagName('div');
+        var i = 0;
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p> -->
-        </div>
+        function nextSlide() {
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
+        }
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-1-fill"></i></div>
-              <h4 class="title"><a href="">Live Classes</a></h4>
-              <p class="description"> <small>Atharw provides live online classes which allow interaction with students
-                  through
-                  chats and comments, which helps to
-                  make the class more dynamic, encourages debate and allows immediate answers to questions. Using a
-                  simple
-                  messaging
-                  system, those watching can interact with the teacher and other viewers. After every live class
-                  students
-                  will get the
-                  recording of that particular class by which one can revise the classes and note down the doubts with
-                  their own speed at
-                  any time anywhere with any device.</small></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-2-fill"></i></div>
-              <h4 class="title"><a href="">Professional Instructor</a></h4>
-              <p class="description"> <small>The instructors who are associated with Atharw are specially software
-                  developers
-                  having years of real world experience.
-                  As they are working on the same domain in their day to day life so they will focus on practical
-                  education more as
-                  compared to theoretical to make students industry ready.</small></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-3-fill"></i></div>
-              <h4 class="title"><a href="">One on One Mentorship</a></h4>
-              <p class="description"> <small>Every student will be associated directly with one member of Atharw. That
-                  member
-                  will provide mentorship to the student
-                  to keep him motivated throughout the training. If the student will be stuck anywhere he/she can
-                  directly
-                  connect with
-                  the mentor to get the best suggestions.</small></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-4-fill"></i></div>
-              <h4 class="title"><a href="">100% Placement Assistance</a></h4>
-              <p class="description"> <small>When a student is joining any of the programs with a platform his/her main
-                  motto to
-                  get a good job after the completion
-                  of the training. With every training program Atharw is promising the students to provide them the
-                  placement guidance to
-                  get selected in the corporate. The experienced members of team Atharw will provide Mocks, GDs,
-                  pre-placement training
-                  and many more things to help the students to get success in interviews.</small></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-5-fill"></i></div>
-              <h4 class="title"><a href="">Industrial Projects</a></h4>
-              <p class="description"> <small>In every training program apart from some minor projects the students have
-                  to
-                  complete some major projects. It is
-                  mandatory for the students to complete the major project and submit it to Atharw. That completion of
-                  the
-                  project will be
-                  clearly mentioned on their final certificate. It is only to keep students confident about their
-                  training.</small></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-dice-6-fill"></i></div>
-              <h4 class="title"><a href="">Internship with Live Project</a></h4>
-              <p class="description"> <small>Throughout the training sessions the students, who are completing all the
-                  assignments properly, whose attendance will be
-                  more than 90% and who have good scores in the quizzes will get the chance to join CodeKart as the
-                  intern
-                  and can work
-                  with team CodeKart on the live projects.</small></p>
-            </div>
-          </div>
-        </div>
+        function prevSlide() {
+            slides[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slides.length;
+            slides[i].classList.add('active');
+        }
 
-      </div>
-    </section><!-- End Services Section -->
+    </script>
 
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container position-relative" data-aos="fade-up">
+    <!-- video volu,e control----------------------------- -->
 
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+    <script>
+        document.getElementsByTagName('video')[0].volume = 0.1;
+    </script>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/swati monalisha.jpg" class="testimonial-img" alt="">
-                <h3>Swati Monalisha</h3>
-                <h4>MCA, SUIT</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  It is a great experience with Atharw. The team is so helpful and always ready to guide. I strongly
-                  recommend others to
-                  join.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    <!-- preloader ------------------------------------ -->
+    <script>
+        $(window).on('load', function () { // makes sure the whole site is loaded 
+            $('#status').fadeOut(); // will first fade out the loading animation 
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+            $('body').delay(350).css({ 'overflow': 'visible' });
+        });
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/Sasmita Mahanta.jpg" class="testimonial-img" alt="">
-                <h3>Sasmita Mahanta</h3>
-                <h4>MCA, SUIT</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  The training sessions are so interactive. All the contents are easily described. Anyone can easily get
-                  all the exposure.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/default.png" class="testimonial-img" alt="">
-                <h3>Sailendra Rath</h3>
-                <h4>MSc, CV Raman</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  The placement training is too good. All the instructors are so experienced and always ready to help. I
-                  personally
-                  recommend to others.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/Rajeswari Nath.jpg" class="testimonial-img" alt="">
-                <h3>Rajeswari Nath</h3>
-                <h4>MCA, SUIT</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Throughout the training I got so much support from my mentor. The team always tries to keep me
-                  motivated. Others can
-                  definitely join Atharw.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/default.png" class="testimonial-img" alt="">
-                <h3>Satyam Mohapatra</h3>
-                <h4>Btech, ITER</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Probably the best trainers are here. They are so dedicated and honest for their work. I have learnt
-                  many things from
-                  them.<i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3><img src="./assets/img/logo-new.png" alt="" style="max-width: 200px;"></h3>
-            <p>
-              "YOUR FUTURE BEGINS WITH US"
-            </p>
-
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="About.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Courses</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Web Developement</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Mobile Developement</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Analytics</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Programming Language</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="courses.html">Soft Skill Training</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Contact US</h4>
-            <p>
-              Plot No 504/2382/2701, <br>
-              First Floor, Kanan Vihar, Phase 2,<br>
-              Patia, BHUBANESWAR.
-              ODISHA [751024], INDIA<br><br>
-              <strong>Phone:</strong> +91 9178 587 486<br>
-              <strong>Email:</strong> info@atharw.com<br>
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-lg-flex py-4">
-
-      <div class="me-lg-auto text-center text-lg-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>CODEKART</span></strong>. All Rights
-          Reserved
-        </div>
-        <div class="credits">
-          Designed by <a href="https://www.thecodekart.com/" target="_blank">Codekart</a>
-        </div>
-      </div>
-      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
-        <a href="https://twitter.com/codekart" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/TheCodeKart" target="_blank" class="facebook"><i
-            class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/thecodekart/?igshid=ohzrg2vli3a" target="_blank" class="instagram"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="mailto:info@atharw.com" target="_blank" class="google-plus"><i class="bi bi-envelope-open"></i></a>
-        <a href="https://www.linkedin.com/company/codekart/" target="_blank" class="linkedin"><i
-            class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    </script>
 </body>
 
 </html>

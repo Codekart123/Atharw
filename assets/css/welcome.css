@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css?family=poppins:100,200,300,400,500,600,700,800,900");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #e9ca9c;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  padding: 30px 100px;
+}
+
+header .logo img {
+  position: absolute;
+  max-width: 25rem;
+  right: 3%;
+}
+
+/* header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+} */
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.banner .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner .imgBx div {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.8s;
+  background-position: center;
+}
+
+.imgBx div h3 {
+  position: fixed;
+  top: 25%;
+  font-size: 1.2rem;
+  left: 50%;
+  border-left: 5px solid orangered;
+  transform: translate(-80%, -80%);
+  z-index: 3;
+}
+
+.imgBx div h1 {
+  position: fixed;
+  top: 30%;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  left: 50%;
+  border-bottom: 2px solid orangered;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgBx div h2 {
+  position: fixed;
+  top: 25%;
+  font-size: 2.7rem;
+  letter-spacing: 0.3rem;
+  left: 50%;
+  border-bottom: 2px solid orangered;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgBx div h5 {
+  position: fixed;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  z-index: 3;
+  text-align: justify;
+  z-index: 3;
+}
+
+.imgBx div h4 {
+  position: fixed;
+  top: 12%;
+  font-size: 2.7rem;
+  letter-spacing: 0.3rem;
+  left: 50%;
+  border-bottom: 2px solid orangered;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgBx div p {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgBx div small {
+  position: fixed;
+  bottom: 27%;
+  left: 65%;
+  text-align: right;
+  letter-spacing: 0.1rem;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.imgBx div img {
+  width: 600px;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  z-index: 2;
+}
+
+.imgBx div video {
+  max-width: 50%;
+  height: auto;
+  position: fixed;
+  top: 20%;
+  left: 23%;
+  z-index: 3;
+  box-shadow: 5px 10px 20px #69696988;
+}
+
+.imgBx div button {
+  position: fixed;
+  bottom: 10%;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: orangered;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px #69696988;
+}
+
+.banner .imgBx div.active {
+  opacity: 1;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  display: flex;
+}
+
+.controls li {
+  position: relative;
+  padding: 20px 50px;
+  list-style: none;
+  flex-direction: row;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(155, 155, 155, 0.247);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 5;
+  margin-left: 50rem;
+  /* left: 0; */
+}
+
+.controls li:hover {
+  background-color: orangered;
+}
+
+/* .controls li::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #111;
+  border-left: 3px solid #111;
+  transform: rotate(40deg);
+}
+
+.controls li:nth-child(2):before {
+  content: "";
+  position: absolute;
+  margin-right: 80px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 3px solid #111;
+  border-left: 3px solid #111;
+  transform: rotate(225deg);
+} */
+
+/* ================== RESPONSIVE MEDIA QUERY ====================== */
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 1024px) {
+  .imgBx div h3 {
+    top: 20%;
+    font-size: 1.2rem;
+    left: 55%;
+    transform: translate(-90%, -80%);
+  }
+
+  .imgBx div h1 {
+    top: 24%;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    transform: translate(-50%, -50%);
+  }
+  .imgBx div h4 {
+    top: 15%;
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    left: 40%;
+    transform: translate(-20%, -50%);
+  }
+
+  .imgBx div h5 {
+    left: 10%;
+    right: 10%;
+    top: 35%;
+    font-size: 0.8rem;
+  }
+
+  .imgBx div p {
+    left: 20%;
+    right: 20%;
+    top: 30%;
+    font-size: 1.2rem;
+    transform: translate(0%, 0%);
+  }
+
+  .imgBx div video {
+    max-width: 90%;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .imgBx div small {
+    bottom: 20%;
+    letter-spacing: 0.1rem;
+  }
+
+  .imgBx div button {
+    bottom: 30%;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+  }
+
+  .controls li {
+    padding: 20px 50px;
+    margin-left: 20rem;
+  }
+
+  /* .controls li::after {
+    width: 20px;
+    height: 20px;
+    margin-left: 60px;
+    transform: rotate(225deg);
+  } */
+
+  .imgBx div img {
+    width: 70vw;
+    opacity: 0.5;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  header .logo img {
+    max-width: 10rem;
+    top: 10%;
+  }
+
+  .imgBx div h3 {
+    top: 12%;
+    font-size: 0.8rem;
+    left: 55%;
+  }
+
+  .imgBx div h1 {
+    top: 15%;
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .imgBx div h2 {
+    top: 15%;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .imgBx div h5 {
+    top: 18%;
+    text-align: justify;
+    font-size: 0.45rem;
+  }
+
+  .imgBx div h4 {
+    top: 15%;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    left: 30%;
+    transform: translate(-10%, -50%);
+  }
+
+  .imgBx div p {
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    z-index: 3;
+    text-align: center;
+    top: 20%;
+    font-size: 0.7rem;
+    transform: translate(0%, 0%);
+
+    /* position: fixed;
+    top: 25%;
+    left: 50%;
+    font-size: 0.6rem;
+    text-align: center;
+    letter-spacing: 0.01rem;
+    transform: translate(-50%, -10%);
+    z-index: 3; */
+  }
+
+  .imgBx div small {
+    bottom: 27%;
+    left: 65%;
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+    /* color: rgb(0, 0, 0); */
+  }
+
+  .imgBx div img {
+    width: 100vw;
+    opacity: 0.3;
+  }
+
+  .imgBx div video {
+    max-width: 90%;
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    box-shadow: 5px 10px 20px #6969695b;
+  }
+
+  .imgBx div button {
+    bottom: 20%;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    display: flex;
+  }
+
+  .controls li {
+    padding: 10px 30px;
+    margin-left: 3rem;
+  }
+
+  /* .controls li::after {
+    width: 10px;
+    height: 10px;
+    margin: 5px 0 0 40px;
+    transform: rotate(225deg);
+  } */
+}
