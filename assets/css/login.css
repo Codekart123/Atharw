@@ -70,7 +70,7 @@ form.sign-in-form {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  margin: 10px 0;
+  margin: 5px 0;
   height: 55px;
   border-radius: 55px;
   display: grid;
@@ -80,7 +80,7 @@ form.sign-in-form {
 }
 
 .input-field:hover {
-  border: 2px solid #ff4102;
+  border: 0.5px solid #ff4102;
 }
 
 .input-field i {
@@ -104,6 +104,19 @@ form.sign-in-form {
 .input-field input::placeholder {
   color: #aaa;
   font-weight: 500;
+}
+
+#check-eye {
+  position: absolute;
+  margin: 1rem 20rem;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#check-eye::after {
+  content: "\1F441";
+  font-size: 25px;
+  visibility: visible;
 }
 
 .social-text {
@@ -282,6 +295,7 @@ form.sign-in-form {
     min-height: 800px;
     height: 100vh;
   }
+
   .signin-signup {
     width: 100%;
     top: 95%;
@@ -383,6 +397,43 @@ form.sign-in-form {
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .input-field {
+    max-width: 380px;
+    height: 45px;
+  }
+
+  .input-field input {
+    font-size: 0.8em;
+  }
+
+  .input-field i {
+    font-size: 0.8em;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  #check-eye {
+    position: absolute;
+    /* top: -8px;
+    left: -4em; */
+    margin: 1rem 17rem;
+    cursor: pointer;
+    visibility: hidden;
+  }
+
+  #check-eye::after {
+    content: "\1F441";
+    font-size: 20px;
+    visibility: visible;
   }
 
   .image {

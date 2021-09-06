@@ -10,11 +10,73 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/login.css" />
     <title>REGISTER | ATHARW | An Initiative of CodeKart</title>
+
     <style>
-        #check-eye {
-            position: absolute;
-            margin: 1.3rem 20rem;
+        #details1 {
+            display: none;
+        }
+
+        .xyz {
+            display: inline-block;
+            background-color: orangered;
+            color: white;
+            padding: 0.5rem;
+            font-family: sans-serif;
+            border-radius: 0.3rem;
             cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        #file-chosen {
+            margin-left: 0.3rem;
+            font-family: sans-serif;
+        }
+
+        .termcon[type=checkbox]+label {
+            display: block;
+            margin: 0.2em;
+            cursor: pointer;
+            padding: 0.2em;
+        }
+
+        .termcon[type=checkbox] {
+            display: none;
+        }
+
+        .termcon[type=checkbox]+label:before {
+            content: "\2714";
+            border: 0.1em solid #000;
+            border-radius: 0.2em;
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            padding-left: 0.2em;
+            padding-bottom: 0.3em;
+            margin-right: 0.2em;
+            vertical-align: bottom;
+            color: transparent;
+            transition: .2s;
+        }
+
+        .termcon[type=checkbox]+label:active:before {
+            transform: scale(0);
+        }
+
+        .termcon[type=checkbox]:checked+label:before {
+            background-color: orangered;
+            border-color: orangered;
+            color: #fff;
+        }
+
+        .termcon[type=checkbox]:disabled+label:before {
+            transform: scale(1);
+            border-color: #aaa;
+        }
+
+        .termcon[type=checkbox]:checked:disabled+label:before {
+            transform: scale(1);
+            background-color: #bfb;
+            border-color: #bfb;
         }
     </style>
 </head>
@@ -33,6 +95,10 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" name="pwd" autocomplete="on" required />
                     </div>
+                    <a href="./forgotpassword.php" class="forgotpassword-btn"
+                        style="color: orangered; font-size: 12px;">Forgot
+                        Password need to recover?</a>
+
                     <input type="submit" name="login-btn" value="Login" class="btn solid" />
                 </form>
 
@@ -42,7 +108,12 @@
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Fullname" name="fullname" id="new-name" autocomplete="new-name"
+                        <input type="text" placeholder="Firstname" name="fullname" id="new-name" autocomplete="new-name"
+                            required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Lastname" name="fullname" id="new-name" autocomplete="new-name"
                             required />
                     </div>
                     <div class="input-field">
@@ -67,10 +138,37 @@
                             autocomplete="con-password" required />
                         <input type="checkbox" id="check-eye" onclick="myFunction()">
                     </div>
+
+                    <div class="" style="display: inline-flex; justify-content: center; align-items: center;">
+                        <input type="checkbox" id="toggle1" style="margin-inline: 0.5rem;" /><label for=""> Want to
+                            be a
+                            Tutor?</label>
+                    </div>
+
+                    <div id="details1"
+                        style="display: none; margin-left: 5%; background-color: antiquewhite; padding: 15px; border-radius: 10px; border: 0.5px dotted orangered">
+                        <label style="font-size: 10px; font-weight: bold;" for="">Upload Adhaar photo :</label>
+                        <input type="file" id="UploadDoc1" name="" /><br>
+                        <label style="font-size: 10px; font-weight: bold;" for="">Upload Latest Education
+                            Certificate :</label>
+                        <input type="file" id="UploadDoc2" name="" />
+
+                        <br><small style="color: red; font-weight: bold;">NB: Make sure all of your documents are
+                            Original.</small>
+                    </div>
+
+                    <div class="">
+                        <input class="termcon" type="checkbox" id="termcon" name="term&con" value="T&C">
+                        <label for="termcon"><a href="#?" style="color: orangered;">Terms & Conditions</a></label>
+                    </div>
+
                     <input type="submit" name="signup-btn" class="btn" value="Sign up" />
                 </form>
             </div>
         </div>
+
+
+
 
         <div class="panels-container">
             <div class="panel left-panel">
@@ -102,7 +200,23 @@
         </div>
     </div>
 
+
+
     <!-- <script src="app.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        jQuery($ => {
+            let $toggle = $('#toggle1').change(e => {
+                $('#details1')[e.target.checked ? 'slideDown' : 'slideUp']();
+            })
+
+            if ($toggle.is(':checked'))
+                $('#details1').show();
+            else
+                $('#details1').hide();
+        });
+    </script>
     <script>
         const sign_in_btn = document.querySelector("#sign-in-btn");
         const sign_up_btn = document.querySelector("#sign-up-btn");
