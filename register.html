@@ -11,9 +11,22 @@
     <link rel="stylesheet" href="./assets/css/login.css" />
     <title>REGISTER | ATHARW | An Initiative of CodeKart</title>
     <style>
+<<<<<<< Updated upstream
         #check-eye {
             position: absolute;
             margin: 1.3rem 20rem;
+=======
+        #details1 {
+            display: none;
+        }
+        .xyz {
+            display: inline-block;
+            background-color: orangered;
+            color: white;
+            padding: 0.5rem;
+            font-family: sans-serif;
+            border-radius: 0.3rem;
+>>>>>>> Stashed changes
             cursor: pointer;
         }
     </style>
@@ -38,17 +51,26 @@
 
 
                 <!-- =================signup form=========================== -->
-                <form action="./process/register-process.php" method="POST" class="sign-up-form">
+                <form action="./process/register-process.php" method="POST" class="sign-up-form" onsubmit="return validateForm()" enctype="multipart/form-data">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
+<<<<<<< Updated upstream
                         <input type="text" placeholder="Fullname" name="fullname" id="new-name" autocomplete="new-name"
+=======
+                        <input type="text" placeholder="Firstname" name="first_name" id="first_name" autocomplete="first_name"
+                            required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Lastname" name="last_name" id="last_name" autocomplete="last_name"
+>>>>>>> Stashed changes
                             required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-phone"></i>
-                        <input type="number" placeholder="Contact" name="contact" id="new-contact"
-                            autocomplete="new-contact" required />
+                        <input type="number" placeholder="Contact" name="contact" id="contact"
+                            autocomplete="contact" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
@@ -56,7 +78,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="password" id="new-password"
+                        <input type="password" placeholder="Password" name="new-password" id="new-password"
                             autocomplete="new-password" required />
                         <input type="checkbox" id="check-eye" onclick="myFunction2()">
                     </div>
@@ -67,6 +89,32 @@
                             autocomplete="con-password" required />
                         <input type="checkbox" id="check-eye" onclick="myFunction()">
                     </div>
+<<<<<<< Updated upstream
+=======
+
+                    <div class="" style="display: inline-flex; justify-content: center; align-items: center;">
+                        <input type="checkbox" id="toggle1" name="checkStatus[]" value="1" style="margin-inline: 0.5rem;" /><label for=""> Want to
+                            be a
+                            Tutor?</label>
+                    </div>
+
+                    <div id="details1"
+                        style="display: none; margin-left: 5%; background-color: antiquewhite; padding: 15px; border-radius: 10px; border: 0.5px dotted orangered">
+                        <label style="font-size: 10px; font-weight: bold;" for="">Upload Adhaar photo :</label>
+                        <input type="file" id="UploadDoc1" name="id_file" /><br>
+                        <label style="font-size: 10px; font-weight: bold;" for="">Upload Latest Education
+                            Certificate :</label>
+                        <input type="file" id="UploadDoc2" name="qual_file" />
+
+                        <br><small style="color: red; font-weight: bold;">NB: Make sure all of your documents are
+                            Original.</small>
+                    </div>
+
+                    <div class="">
+                        <input class="termcon" type="checkbox" id="termcon" name="term&con" value="T&C">
+                        <label for="termcon"><a href="#?" style="color: orangered;">Terms & Conditions</a></label>
+                    </div>
+>>>>>>> Stashed changes
                     <input type="submit" name="signup-btn" class="btn" value="Sign up" />
                 </form>
             </div>
