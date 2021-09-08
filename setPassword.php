@@ -95,15 +95,15 @@
     <div class="modal-window">
         <div>
             <a href="./register.html" class="modal-close">Login</a>
-            <label class="inp-label label-position1" for="">New Password</label>
-            <input class="password-check-inp" type="email" autocomplete="false">
-            <label class="inp-label label-position2" for="">Confirm Password</label>
-            <input class="password-check-inp" type="email" autocomplete="false">
-
-            <button style="padding: 10px 20px; border-radius:5px; background-color: #000; color: #fff; border: none; margin-top: 10px;">Reset Password</button><br>
+            <form action="./process/updatepassword.php" method="post">
+                <label class="inp-label label-position1" for="">New Password</label>
+                <input class="password-check-inp" type="password" name="password" autocomplete="false" minlength="8" required>
+                <label class="inp-label label-position2" for="">Confirm Password</label>
+                <input class="password-check-inp" type="password" name="cpassword" autocomplete="false" minlength="8" required>
+                <button type="submit" name="updatepassword" style="padding: 10px 20px; border-radius:5px; background-color: #000; color: #fff; border: none; margin-top: 10px;">Reset Password</button><br>
+            </form>
         </div>
     </div>
 
 </body>
-
 </html>
