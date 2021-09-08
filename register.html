@@ -104,22 +104,22 @@
 
 
                 <!-- =================signup form=========================== -->
-                <form action="./process/register-process.php" method="POST" class="sign-up-form">
+                <form action="./process/register-process.php" method="POST" class="sign-up-form" onsubmit="return validateForm()" enctype="multipart/form-data">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Firstname" name="fullname" id="new-name" autocomplete="new-name"
+                        <input type="text" placeholder="Firstname" name="first_name" id="first_name" autocomplete="first_name"
                             required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Lastname" name="fullname" id="new-name" autocomplete="new-name"
+                        <input type="text" placeholder="Lastname" name="last_name" id="last_name" autocomplete="last_name"
                             required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-phone"></i>
-                        <input type="number" placeholder="Contact" name="contact" id="new-contact"
-                            autocomplete="new-contact" required />
+                        <input type="number" placeholder="Contact" name="contact" id="contact"
+                            autocomplete="contact" required />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" name="password" id="new-password"
+                        <input type="password" placeholder="Password" name="new-password" id="new-password" minlength="8"
                             autocomplete="new-password" required />
                         <input type="checkbox" id="check-eye" onclick="myFunction2()">
                     </div>
@@ -135,12 +135,12 @@
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Confirm Password" name="con-password" id="con-password"
-                            autocomplete="con-password" required />
+                            autocomplete="con-password" minlength="8" required />
                         <input type="checkbox" id="check-eye" onclick="myFunction()">
                     </div>
 
                     <div class="" style="display: inline-flex; justify-content: center; align-items: center;">
-                        <input type="checkbox" id="toggle1" style="margin-inline: 0.5rem;" /><label for=""> Want to
+                        <input type="checkbox" id="toggle1" name="checkStatus[]" value="1" style="margin-inline: 0.5rem;" /><label for=""> Want to
                             be a
                             Tutor?</label>
                     </div>
@@ -148,10 +148,10 @@
                     <div id="details1"
                         style="display: none; margin-left: 5%; background-color: antiquewhite; padding: 15px; border-radius: 10px; border: 0.5px dotted orangered">
                         <label style="font-size: 10px; font-weight: bold;" for="">Upload Adhaar photo :</label>
-                        <input type="file" id="UploadDoc1" name="" /><br>
+                        <input type="file" id="UploadDoc1" name="id_file" /><br>
                         <label style="font-size: 10px; font-weight: bold;" for="">Upload Latest Education
                             Certificate :</label>
-                        <input type="file" id="UploadDoc2" name="" />
+                        <input type="file" id="UploadDoc2" name="qual_file" />
 
                         <br><small style="color: red; font-weight: bold;">NB: Make sure all of your documents are
                             Original.</small>
@@ -161,7 +161,6 @@
                         <input class="termcon" type="checkbox" id="termcon" name="term&con" value="T&C">
                         <label for="termcon"><a href="#?" style="color: orangered;">Terms & Conditions</a></label>
                     </div>
-
                     <input type="submit" name="signup-btn" class="btn" value="Sign up" />
                 </form>
             </div>
@@ -265,6 +264,58 @@
 
         password.onchange = validatePassword;
         confirm_password.onkeyup = validatePassword;
+    </script>
+    <script>
+        function validateForm(){
+            fname = document.getElementById('first_name').value;
+            lname = document.getElementById('last_name').value;
+            contact = document.getElementById('contact').value;
+            email = document.getElementById('email').value;
+
+            if(fname.length == " "){
+                alert( " Enter valid name");
+                return false;
+            }
+            if(fname.length < 4){
+                alert("name must be greater than 4 character ");
+                return false;
+            }
+            if(lname.length == " "){
+                alert(" Enter valid name");
+                return false;
+            }
+            if(lname.length < 4){
+                alert("name must be greater than 4 character ");
+                return false;
+            }
+
+            if(contact == ""){
+                alert("Please Enter phone no");    
+                return false;
+            }
+            if(isNaN(contact)){
+                alert("only numbers are allowed");    
+                return false;
+            }
+            if(contact.length != 10){
+                alert("no must be 10 digit only");    
+                return false;
+            }
+            if(email == ""){
+                alert ("Please Enter your mail id");    
+                return false;
+            }
+            if(email.indexOf('@') <= 0){
+                alert ("invalid position of @");    
+                return false;
+            }
+            if((email.charAt(mail.length-4) != '.') && (email.charAt(email.length-3) != '.')){
+                alert("invalid '.' position");    
+                return false;
+            }
+
+            return true;
+        }
     </script>
 </body>
 
