@@ -67,18 +67,38 @@
     <div class="modal-window">
         <div>
             <a href="./register.html" class="modal-close">Go Back</a>
-            <form action="./setPassword.php">
+            <form action="./process/passwordlink.php" method="post">
                 <label for="" style="font-size: 12px; background-color: #fff; padding: 2px; position: absolute; left: 50px; top: 45px;">Enter
                     your
                     Email</label>
-                <input style="width: 100%; height: 2rem; font-size: 16px;  border-radius: 5px; margin-top: 20px; outline: none;" type="email" autocomplete="false">
-                <button style="padding: 10px 20px; border-radius:5px; background-color: #000; color: #fff; border: none; margin-top: 10px;" type="submit">Recover
+                <input style="width: 100%; height: 2rem; font-size: 16px;  border-radius: 5px; margin-top: 20px; outline: none;" id="email" type="email" autocomplete="false" name="email" onsubmit="return validateEmail()">
+                <button style="padding: 10px 20px; border-radius:5px; background-color: #000; color: #fff; border: none; margin-top: 10px;" type="submit" name="emailsubmit">Recover
                     Password</button><br>
             </form>
             <!-- <small style="color: orangered;">*Recover link sent to you email address.</small> -->
         </div>
     </div>
 
+
+    <script>
+        function validateEmail(){
+            email = document.getElementById('email').value;
+            if(email == ""){
+                alert ("Please Enter your mail id");    
+                return false;
+            }
+            if(email.indexOf('@') <= 0){
+                alert ("invalid position of @");    
+                return false;
+            }
+            if((email.charAt(mail.length-4) != '.') && (email.charAt(email.length-3) != '.')){
+                alert("invalid '.' position");    
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </body>
 
 </html>
