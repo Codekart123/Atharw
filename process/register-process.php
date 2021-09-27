@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('db.php');
 
 
@@ -52,22 +52,28 @@ if (isset($_POST["signup-btn"])) {
     $cpass = $_POST['con-password'];
     $chkStatus = isset($_POST['checkStatus']) ? $_POST['checkStatus'] : '0'; 
 
-    // $pass = password_hash($password, PASSWORD_BCRYPT);
-    // $cpass = password_hash($cpassword, PASSWORD_BCRYPT);
     $token = bin2hex( random_bytes(15));
-
-    // echo "<script>alert($pass);</script>";
-    // echo "<script>alert($cpass);</script>";
-
     if($chkStatus){
+
+        if(getimagesize($_FILES['id_file']['tmp_name']) == FALSE){
+            echo " Please Select an image";
+        }else{
+            $idProof =  $_FILES['id_file'];
+            $idname = $idProof['name'];
+            $iderror = $idProof['error'];
+            $idtmp = $idProof['tmp_name'];
+            $dataid = file_get_contents($_FILES['id_file']['tmp_name']);
+            $idextension = explode('.',$idname); //sepatare name and extension
+            $idchk = strtolower(end($idextension)); // store the extension
+        }
         //chk for identification proof
-        $idProof =  $_FILES['id_file'];
-        $idname = $idProof['name'];
-        $iderror = $idProof['error'];
-        $idtmp = $idProof['tmp_name'];
-        $dataid = file_get_contents($_FILES['id_file']['tmp_name']);
-        $idextension = explode('.',$idname); //sepatare name and extension
-        $idchk = strtolower(end($idextension)); // store the extension
+        // $idProof =  $_FILES['id_file'];
+        // $idname = $idProof['name'];
+        // $iderror = $idProof['error'];
+        // $idtmp = $idProof['tmp_name'];
+        // $dataid = file_get_contents($_FILES['id_file']['tmp_name']);
+        // $idextension = explode('.',$idname); //sepatare name and extension
+        // $idchk = strtolower(end($idextension)); // store the extension
 
         //chk for qualification certificate
         $qualificationProof = $_FILES['qual_file'];
@@ -81,8 +87,8 @@ if (isset($_POST["signup-btn"])) {
         $extensionStored = array('png','jpg','jpeg','doc','docx','pdf');
 
         if(in_array($idchk,$extensionStored) && in_array($qualificationchk,$extensionStored)){
-            $id_destination_folder = "../UploadDocument/id/".$idname;
-            $qualification_destination_folder = "../UploadDocument/qualification/".$qualificationname;
+            $id_destination_folder = "UploadDocument/id/".$idname;
+            $qualification_destination_folder = "UploadDocument/qualification/".$qualificationname;
             move_uploaded_file($idtmp,$id_destination_folder);
             move_uploaded_file($qualificationtmp,$qualification_destination_folder);  
 
@@ -104,7 +110,7 @@ if (isset($_POST["signup-btn"])) {
                     $stmt = mysqli_prepare($conn,$register);
                     // bind query
                     if($stmt){
-                        mysqli_stmt_bind_param($stmt,'ssssssbbds', $first_name, $last_name, $contact, $email,$pass,$cpass,$dataid,$dataqual,$teacher,$token);
+                        mysqli_stmt_bind_param($stmt,'ssssssssss', $first_name, $last_name, $contact, $email,$pass,$cpass,$id_destination_folder,$qualification_destination_folder,$teacher,$token);
                     }                   
                     // execute query C:\xampp\htdocs\Atharw\process\activate.php
                     if(mysqli_stmt_execute($stmt)){
@@ -112,7 +118,7 @@ if (isset($_POST["signup-btn"])) {
                         $body = "Hi.. $first_name'.'$last_name. click here to activate your account http://localhost/Atharw/process/activate.php?token=$token";
                         $headers = "From: patrabhagyashree004@gmail.com";
                         if(mail($email,$subject,$body,$headers)){
-                            echo "<script>alert('Account activation mail successfully sent to $email...')</script>";
+                            echo "<script type='text/javascript'>alert('Account activation mail successfully sent to $email...')</script>";
                             header('location:../register.html');
                         }else{
                             echo "Mail sending failed..";
