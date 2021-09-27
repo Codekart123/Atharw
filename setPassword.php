@@ -1,11 +1,48 @@
+<?php
+session_start();
+require_once('./process/db.php');
+
+
+if (isset($_POST["updatepassword"])) {
+
+  
+    $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
+    $email =  $_SESSION['mail'];
+    $passreset = 0;
+
+    if($password === $cpassword){
+        $updatePass = "UPDATE signup SET password='$password',con_password='$cpassword',passreset='$passreset' WHERE email ='$email'";
+        $query = mysqli_query($conn,$updatePass);
+        if($query){
+            
+                // echo "<script>alert('Password reset sucessfully')</script>";
+                unset($_SESSION['mail']);
+                header('location: register.html?message=Password reset sucessfully');
+        }
+        else{
+            // echo "<script>alert('Try again..');</script>";
+                header('location: setPassword.php?message=Please Try again..!!');
+        }
+    }
+    else{
+        // echo "<script>alert('Password mismatch..');</script>";
+        header('location: setPassword.php?message=password mismatch..');
+    }
+
+       
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
+    <!-- Favicons -->
+    <link href="assets/img/ATHARW-icon.jpg" rel="icon">
+    <link href="assets/img/ATHARW-icon.jpg" rel="apple-touch-icon">
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ATHARW | an inititative of CodeKart</title>
     <style>
         * {
             margin: 0;
@@ -93,17 +130,34 @@
 
 <body>
     <div class="modal-window">
-        <div>
+        <div> 
+            <!--  action="./process/updatepassword.php"   -->
             <a href="./register.html" class="modal-close">Login</a>
-            <form action="./process/updatepassword.php" method="post">
+            <form action="<?php echo htmlentities($_SERVER['PHP_SELF'])?>" method="post" onsubmit="return validatepass()">
                 <label class="inp-label label-position1" for="">New Password</label>
-                <input class="password-check-inp" type="password" name="password" autocomplete="false" minlength="8" required>
+                <input class="password-check-inp" type="password" name="password" autocomplete="false" id="pass" minlength="8" required>
                 <label class="inp-label label-position2" for="">Confirm Password</label>
-                <input class="password-check-inp" type="password" name="cpassword" autocomplete="false" minlength="8" required>
+                <input class="password-check-inp" type="password" name="cpassword" autocomplete="false" id="cpass" minlength="8" required>
                 <button type="submit" name="updatepassword" style="padding: 10px 20px; border-radius:5px; background-color: #000; color: #fff; border: none; margin-top: 10px;">Reset Password</button><br>
+                <p style="color: orangered; font-size:15px;"><?php $msg=$_GET['message'];echo $msg; ?></p>
             </form>
         </div>
     </div>
+
+    <script>
+        function validatepass(){
+            var pass = document.getElementById('pass').value;
+            var cpass  =document.getElementById('cpass').value;
+
+            if(pass != cpass){
+                console.log(pass);
+                console.log(cpass);
+                alert('Password are not matching');
+                return false;
+            }
+        }
+
+    </script>
 
 </body>
 </html>
